@@ -7,12 +7,12 @@
 void printthearray(int array[], int size) {
     cout<<"[";
     for (int f=0; f<size; f++) {
-        cout<<array[f];
+        std::cout<<array[f];
         if (f<size-1) {
-            cout<<", ";
+            std::cout<<", ";
         }
     }
-    cout<<"]";
+    std::cout<<"]";
 };
 
 
@@ -22,31 +22,31 @@ int sizedefinition;
     cin>>sizedefinition;
 
     if (sizedefinition <=0) {
-        cout<<"Array size not approved."<<endl;
+        std::cout<<"Array size not approved."<<endl;
         return 1;
     }
 
     int* array=new int[sizedefinition];
     cout<<"Enter"<< sizedefinition << " numbers: "<<endl;
     for (int f=0; f<sizedefinition; f++) {
-        cout<<"Value "<<f+1<<": ";
+        std::cout<<"Value "<<f+1<<": ";
         cin>>array[f];
     }
 
     int shift;
-    cout<<"Enter the amount of shifts for left: ";
+    std::cout<<"Enter the amount of shifts for left: ";
     cin>>shift;
 
-    cout<<endl;
-    cout<<"First array that was ever given: ";
+    std::cout<<endl;
+    std::cout<<"First array that was ever given: ";
     printthearray(array,sizedefinition);
-    cout<<endl;
+    std::cout<<endl;
 
     arrayShift(array,sizedefinition,shift);
 
-    cout<<"The shifted array is: ";
+    std::cout<<"The shifted array is: ";
     printthearray(array,sizedefinition);
-    cout<<endl;
+    std::cout<<endl;
     delete[]array;
     return 0;
 
